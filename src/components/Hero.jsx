@@ -36,17 +36,20 @@ const Hero = () => {
     >
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1595411425732-e69c1abe2763?q=80&w=2070&auto=format&fit=crop")' }}
       />
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-dark via-dark/80 to-transparent" />
+      {/* Base dark overlay to dim bright areas */}
+      <div className="absolute inset-0 z-0 bg-dark/50" />
+      {/* Heavy gradient from bottom up */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-dark via-dark/90 to-transparent" />
 
-      <div className="relative z-20 max-w-5xl">
+      <div className="relative z-20 max-w-5xl pt-24 md:pt-0">
         <h1 className="flex flex-col gap-2 mb-6">
           <span className="hero-text text-primary font-heading font-bold text-4xl md:text-6xl lg:text-8xl tracking-tight leading-[0.9]">
             Craft the
           </span>
           <span className="hero-text text-accent font-drama italic text-6xl md:text-8xl lg:text-[10rem] leading-[0.8] ml-2 md:ml-8">
-            Architecture.
+            Art.
           </span>
         </h1>
         

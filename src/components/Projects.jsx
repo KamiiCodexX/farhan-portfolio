@@ -45,10 +45,9 @@ const Projects = () => {
             end: 'top top',
             scrub: true,
           },
-          scale: 0.9,
-          filter: 'blur(10px)',
-          opacity: 0.5,
-          y: -50,
+          scale: 0.92,
+          filter: 'blur(8px)',
+          opacity: 0.6,
         });
       });
     }, containerRef);
@@ -70,12 +69,13 @@ const Projects = () => {
         </h2>
       </div>
 
-      <div className="w-full max-w-6xl relative flex flex-col gap-[10dvh] md:pb-[30dvh]">
+      <div className="w-full max-w-6xl relative flex flex-col gap-[20dvh] pb-[20dvh] md:pb-[30dvh]">
         {projects.map((project, i) => (
           <div 
             key={project.id}
             ref={el => cardsRef.current[i] = el}
-            className="sticky top-24 md:top-32 w-full h-[60dvh] md:h-[70dvh] rounded-[2rem] md:rounded-[3rem] bg-background text-dark p-8 md:p-16 border border-dark/10 shadow-2xl overflow-hidden flex flex-col justify-between group origin-top"
+            style={{ top: `calc(8rem + ${i * 2.5}rem)` }}
+            className="sticky w-full h-[60dvh] md:h-[70dvh] rounded-[2rem] md:rounded-[3rem] bg-background text-dark p-8 md:p-16 border border-dark/10 shadow-2xl overflow-hidden flex flex-col justify-between group origin-top"
           >
             {/* SVG Background Animation Elements */}
             <div className="absolute inset-0 z-0 opacity-10 pointer-events-none overflow-hidden flex items-center justify-center">

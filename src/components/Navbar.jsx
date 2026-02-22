@@ -24,7 +24,11 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-40 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] rounded-full px-6 py-3 flex items-center gap-8 mix-blend-difference text-primary border border-primary/20 bg-transparent backdrop-blur-sm`}
+      className={`fixed top-6 w-[90%] md:w-auto max-w-5xl left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] rounded-full px-6 py-3 flex items-center justify-between gap-8 border ${
+        isScrolled
+          ? 'bg-background/90 backdrop-blur-xl border-dark/10 shadow-lg text-dark'
+          : 'bg-transparent border-transparent text-primary'
+      }`}
     >
       <div className="font-heading font-bold text-lg tracking-tight whitespace-nowrap">
         Muhammad Farhan
